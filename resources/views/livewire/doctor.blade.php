@@ -46,7 +46,7 @@
     @if($result)
         <div class="font-bold text-lg text-center">
             <div class="text-white bg-red-500 rounded-t">判定</div>
-            <div class="bg-gray-100">
+            <div class="bg-gray-100 rounded-b">
                 {{ $result ?? '' }}
             </div>
         </div>
