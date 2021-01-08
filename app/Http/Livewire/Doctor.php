@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
@@ -15,7 +16,7 @@ class Doctor extends Component
 
     public function mount()
     {
-        $this->questions = config('doctor.questions');
+        $this->questions = Arr::shuffle(config('doctor.questions'));
 
         $this->checked = collect();
     }
