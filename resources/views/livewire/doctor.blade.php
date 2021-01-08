@@ -20,7 +20,7 @@
                     <label>
                         <x-input type="radio"
                                  name="{{ $loop->index }}"
-                                 wire:click="checked({{ $loop->index }}, {{ $question['yes'] }})">
+                                 wire:click="checked({{ $loop->index }}, {{ $question['yes'] ?? 0 }})">
                         </x-input>
                     </label>
                 </td>
@@ -28,14 +28,14 @@
                     <label>
                         <x-input type="radio"
                                  name="{{ $loop->index }}"
-                                 wire:click="checked({{ $loop->index }}, {{ $question['neither'] }})"></x-input>
+                                 wire:click="checked({{ $loop->index }}, {{ $question['neither'] ?? 0 }})"></x-input>
                     </label>
                 </td>
                 <td class="text-center">
                     <label>
                         <x-input type="radio"
                                  name="{{ $loop->index }}"
-                                 wire:click="checked({{ $loop->index }}, {{ $question['no'] }})"></x-input>
+                                 wire:click="checked({{ $loop->index }}, {{ $question['no'] ?? 0 }})"></x-input>
                     </label>
                 </td>
             </tr>
