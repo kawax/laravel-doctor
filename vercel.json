@@ -16,7 +16,7 @@
         }
     ],
     "env": {
-        "APP_NAME": "Laravel Doctor",
+        "APP_NAME": "Laravelプロジェクトの健全性調査",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
