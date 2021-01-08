@@ -47,9 +47,21 @@ return [
             'neither'  => 0,
         ],
         [
-            'question' => '短いFacadeを使っている',
+            'question' => '短いFacadeを使っている(use Auth;)',
             'yes'      => -10,
             'no'       => 10,
+            'neither'  => 0,
+        ],
+        [
+            'question' => 'サービスクラスをstaticメソッドで作っている',
+            'yes'      => -100,
+            'no'       => 10,
+            'neither'  => 0,
+        ],
+        [
+            'question' => 'env()はconfigファイルでしか使ってない',
+            'yes'      => 10,
+            'no'       => -100,
             'neither'  => 0,
         ],
     ],

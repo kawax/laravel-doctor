@@ -26,7 +26,7 @@ class Doctor extends Component
      */
     public function checked(int $index, int $value)
     {
-        $this->checked->put($index, $value);
+        $this->checked->put('checked'.$index, $value);
         $this->result = $this->result();
     }
 
