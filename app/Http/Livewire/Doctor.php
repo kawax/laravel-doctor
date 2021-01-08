@@ -2,13 +2,12 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
 class Doctor extends Component
 {
-    public array $questions;
+    public Collection $questions;
 
     public Collection $checked;
 
@@ -16,7 +15,7 @@ class Doctor extends Component
 
     public function mount()
     {
-        $this->questions = Arr::shuffle(config('doctor.questions'));
+        $this->questions = collect(config('doctor.questions'))->shuffle();
 
         $this->checked = collect();
     }
@@ -28,6 +27,7 @@ class Doctor extends Component
     public function checked(int $index, int $value)
     {
         $this->checked->put('checked'.$index, $value);
+
         $this->result = $this->result();
     }
 
