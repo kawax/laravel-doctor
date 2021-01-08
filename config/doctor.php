@@ -46,6 +46,12 @@ return [
             'no'       => -10,
             'neither'  => 0,
         ],
+        [
+            'question' => '短いFacadeを使っている',
+            'yes'      => -10,
+            'no'       => 10,
+            'neither'  => 0,
+        ],
     ],
 
 ];
