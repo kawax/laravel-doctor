@@ -13,6 +13,8 @@ class Doctor extends Component
 
     public string $result;
 
+    public int $score;
+
     public function mount()
     {
         $this->questions = collect(config('doctor.questions'))->shuffle();
@@ -40,11 +42,11 @@ class Doctor extends Component
             return '';
         }
 
-        $result = $this->checked->values()->sum();
+        $this->score = $this->checked->values()->sum();
 
-        if ($result > config('doctor.result.good.score')) {
+        if ($this->score > config('doctor.result.good.score')) {
             return config('doctor.result.good.message');
-        } elseif ($result < config('doctor.result.bad.score')) {
+        } elseif ($this->score < config('doctor.result.bad.score')) {
             return config('doctor.result.bad.message');
         } else {
             return config('doctor.result.normal.message');
