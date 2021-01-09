@@ -64,6 +64,17 @@ return [
             'no'       => -100,
             'neither'  => 0,
         ],
+        [
+            'question' => 'レンタルサーバーで動かしている',
+            'yes'      => -100,
+            'no'       => 10,
+            'neither'  => 0,
+        ],
+        [
+            'question' => '開発環境はXAMPP/MAMP',
+            'yes'      => -100,
+            'no'       => 10,
+            'neither'  => 0,
+        ],
     ],
-
 ];
